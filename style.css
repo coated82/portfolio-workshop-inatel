@@ -71,7 +71,7 @@ nav {
   display: grid;
   gap: 70px;
   grid-template-columns: 3fr 2fr;
-  min-height: 75vh;
+  min-height: calc(100vh - 86px);
   padding-bottom: 80px;
   padding-top: 50px;
 }
