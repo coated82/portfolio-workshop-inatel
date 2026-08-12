@@ -1,0 +1,310 @@
+/* 1. Configurações gerais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f8fc;
+  color: #071b33;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.1;
+}
+
+/* 2. Cabeçalho */
+.cabecalho,
+.inicio,
+.sobre,
+.projetos,
+footer {
+  margin: auto;
+  max-width: 1180px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.cabecalho {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo span,
+h1 span,
+.destaque {
+  color: #065cbe;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+/* 3. Apresentação */
+.inicio {
+  align-items: center;
+  display: grid;
+  gap: 70px;
+  grid-template-columns: 3fr 2fr;
+  min-height: 75vh;
+  padding-bottom: 80px;
+  padding-top: 50px;
+}
+
+.destaque {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 72px;
+  letter-spacing: -4px;
+}
+
+.introducao {
+  font-size: 18px;
+  margin: 28px 0;
+  max-width: 560px;
+}
+
+.botoes {
+  display: flex;
+  gap: 12px;
+}
+
+.botao {
+  border: 1px solid #071b33;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: 600;
+  padding: 12px 22px;
+}
+
+.principal {
+  background: #071b33;
+  color: white;
+}
+
+.cartao-perfil {
+  width: 310px;
+}
+
+.cartao-perfil img {
+  border-radius: 26px;
+  display: block;
+  height: 388px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cartao-perfil figcaption {
+  color: #071b33;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* 4. Sobre e projetos */
+.sobre,
+.projetos {
+  border-top: 1px solid #c9c6bf;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.apoio {
+  margin-top: 18px;
+  max-width: 560px;
+}
+
+.duas-colunas {
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 1fr 1fr;
+}
+
+h2 {
+  font-size: 48px;
+  letter-spacing: -2px;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin-top: 25px;
+}
+
+.habilidades li {
+  border: 1px solid #c9c6bf;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.lista-projetos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 45px;
+}
+
+.projeto {
+  border: 1px solid #071b33;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 330px;
+  padding: 24px;
+}
+
+.tecnologias {
+  border-top: 1px solid currentColor;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding-top: 12px;
+  text-transform: uppercase;
+}
+
+.projeto > span {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.projeto h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.amarelo {
+  background: #f5b82e;
+}
+
+.azul {
+  background: #065cbe;
+  color: white;
+}
+
+.coral {
+  background: #9adbe8;
+}
+
+/* 5. Contato e rodapé */
+.contato {
+  align-items: center;
+  background: #065cbe;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.contato .destaque {
+  color: white;
+}
+
+.contato > p:not(.destaque) {
+  margin: 18px 0 28px;
+}
+
+.claro {
+  background: white;
+  color: #071b33;
+}
+
+footer {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+/* 6. Ajustes para celular */
+@media (max-width: 800px) {
+  .cabecalho,
+  .inicio,
+  .sobre,
+  .projetos,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  nav a:not(:last-child) {
+    display: none;
+  }
+
+  .inicio,
+  .duas-colunas,
+  .lista-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .inicio {
+    gap: 50px;
+  }
+
+  h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .cartao-perfil {
+    margin: auto;
+    width: 280px;
+  }
+
+  .cartao-perfil img {
+    height: 350px;
+  }
+
+  .sobre,
+  .projetos {
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+
+  .projeto {
+    min-height: 260px;
+  }
+}
